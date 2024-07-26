@@ -3,17 +3,18 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+const toggleModeButton = document.getElementById('toggle-mode');
 
 const perguntas = [
     {
-        enunciado: "Oo",
+        enunciado: "OLAAaA",
         alternativas: [
           {
-            texto: "oo",
+            texto: "aluraaaa",
             afirmacao: "afirmacao"
           },
           {
-            texto:"ooo",
+            texto:"555555",
             afirmacao: "afirmacao"
           }
         ]
@@ -71,7 +72,7 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
+    caixaAlternativas.innerHTML = "";
     mostraAlternativas();
 }
 
@@ -79,23 +80,32 @@ function mostraAlternativas() {
     caixaAlternativas.innerHTML = "";
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
-        botaoAlternativas.addEventListener("click",  () => respostaSelecionada(alternativa));
+        botaoAlternativas.textContent = alternativa.texto; // Corrigido aqui
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal += afirmacoes + "" ;
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacao = opcaoSelecionada.afirmacao; // Corrigido aqui
+    historiaFinal += afirmacao + " ";
     atual++;
     mostraPergunta();
 }
 
-function mostraResultado(){
-  caixaPerguntas.textContent = "Em 2040...";
-  textoResultado.textContent = historiaFinal;
-  caixaAlternativas.textContent = "";
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2040...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.innerHTML = "";
 }
+
+toggleModeButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+        toggleModeButton.textContent = 'Escuro';
+    } else {
+        toggleModeButton.textContent = 'Claro';
+    }
+});
 
 mostraPergunta();
