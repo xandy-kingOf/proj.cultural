@@ -7,53 +7,53 @@ const toggleModeButton = document.getElementById('toggle-mode');
 
 const perguntas = [
     {
-        enunciado: "OLAAaA",
+        enunciado: "Onde foi criado as Olimpíadas?",
         alternativas: [
           {
-            texto: "aluraaaa",
+            texto: "Atenas",
             afirmacao: "afirmacao"
           },
           {
-            texto:"555555",
+            texto:"Brasil",
             afirmacao: "afirmacao"
           }
         ]
     },
     {
-        enunciado: "iio",
+        enunciado: "Que país ganhou a primeira Olimpíada?",
         alternativas: [
           {
-            texto:"io",
+            texto:"EUA",
             afirmacao: "afirmacao"
           },
           {
-            texto:"ioo",
+            texto:"COREIA DO NORTE",
             afirmacao: "afirmacao"
           }
         ]
     },
     {
-        enunciado: "iioo",
+        enunciado: "Quantos paises devem participar das Olimpiadas?",
         alternativas: [
           {
-            texto:"ioo",
+            texto:"206",
             afirmacao: "afirmacao"
           },
           {
-            texto:"iooo",
+            texto:"102",
             afirmacao: "afirmacao"
           }
         ]
     },
     {
-        enunciado: "iiio",
+        enunciado: "QUal o pais sede das Olimpiadas no ano de 2024",
         alternativas: [
           {
-            texto:"iio",
+            texto:"FRANÇA",
             afirmacao: "afirmacao"
           },
           {
-            texto:"iioo",
+            texto:"ANGOLA",
             afirmacao: "afirmacao"
           } 
         ]
