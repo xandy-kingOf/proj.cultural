@@ -1,16 +1,17 @@
 :root {
-    --cor-fundo: #ffffff;
+    --cor-fundo: #01080E; /* Fundo escuro */
     --cor-principal: #005EB8; /* Azul Olímpico */
     --cor-secundaria: #FFD700; /* Amarelo Olímpico */
     --cor-destaque: #34A853; /* Verde Olímpico */
-    --cor-texto: #000000; /* Preto Olímpico */
-    --cor-fundo-claro: #F3F4F6;
-    --cor-principal-claro: #FFFFFF;
-    --cor-secundaria-claro: #E2E8F0;
-    --cor-destaque-claro: #2D3748;
-    --cor-texto-claro: #1A202C;
-    --cor-botao-claro: #34A853;
-    --cor-botao-texto-claro: #FFFFFF;
+    --cor-texto: #000000; /* Texto branco */
+    --cor-fundo-claro: #FFFFFF; /* Fundo claro */
+    --cor-principal-claro: #F3F4F6; /* Fundo claro principal */
+    --cor-secundaria-claro: #E2E8F0; /* Fundo claro secundário */
+    --cor-destaque-claro: #2D3748; /* Texto escuro */
+    --cor-texto-claro: #000000; /* Texto escuro */
+    --cor-botao-claro: #34A853; /* Cor do botão no modo claro */
+    --cor-botao-texto-claro: #FFFFFF; /* Cor do texto do botão no modo claro */
+    --cor-borda: #34A853; /* Cor da borda verde */
 }
 
 body {
@@ -36,13 +37,13 @@ body.light-mode {
     text-align: center;
     padding: 20px;
     position: relative;
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-borda);
     border-radius: 15px;
 }
 
 body.light-mode .caixa-principal {
     background-color: var(--cor-principal-claro);
-    border-color: var(--cor-secundaria-claro);
+    border-color: var(--cor-borda);
 }
 
 h1 {
@@ -60,6 +61,7 @@ button {
     border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s, color 0.3s;
+    margin: 10px 0; /* Adicionado margem para separar os botões */
 }
 
 button:hover {
@@ -85,10 +87,4 @@ body.light-mode .toggle-mode {
 body.light-mode .toggle-mode:hover {
     background-color: var(--cor-destaque-claro);
     color: var(--cor-principal-claro);
-}
-
-.logo-olympics {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
 }
