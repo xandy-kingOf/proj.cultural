@@ -1,14 +1,16 @@
 :root {
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
+    --cor-fundo: #ffffff;
+    --cor-principal: #005EB8; /* Azul Olímpico */
+    --cor-secundaria: #FFD700; /* Amarelo Olímpico */
+    --cor-destaque: #34A853; /* Verde Olímpico */
+    --cor-texto: #000000; /* Preto Olímpico */
     --cor-fundo-claro: #F3F4F6;
     --cor-principal-claro: #FFFFFF;
     --cor-secundaria-claro: #E2E8F0;
     --cor-destaque-claro: #2D3748;
     --cor-texto-claro: #1A202C;
+    --cor-botao-claro: #34A853;
+    --cor-botao-texto-claro: #FFFFFF;
 }
 
 body {
@@ -34,10 +36,13 @@ body.light-mode {
     text-align: center;
     padding: 20px;
     position: relative;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 15px;
 }
 
 body.light-mode .caixa-principal {
     background-color: var(--cor-principal-claro);
+    border-color: var(--cor-secundaria-claro);
 }
 
 h1 {
@@ -54,7 +59,7 @@ button {
     border: none;
     border-radius: 15px;
     padding: 15px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
@@ -70,4 +75,20 @@ button:hover {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+}
+
+body.light-mode .toggle-mode {
+    background-color: var(--cor-botao-claro);
+    color: var(--cor-botao-texto-claro);
+}
+
+body.light-mode .toggle-mode:hover {
+    background-color: var(--cor-destaque-claro);
+    color: var(--cor-principal-claro);
+}
+
+.logo-olympics {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
 }
