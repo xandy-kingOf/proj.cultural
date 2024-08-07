@@ -7,7 +7,7 @@ const toggleModeButton = document.getElementById('toggle-mode');
 
 const perguntas = [
     {
-        enunciado: "Onde foi criado as Olimpíadas?",
+        enunciado: "Onde foi criada as Olimpíadas?",
         alternativas: [
           {
             texto: "Atenas",
@@ -33,7 +33,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Quantos paises devem participar das Olimpiadas?",
+        enunciado: "Quantos países devem participar das Olimpíadas?",
         alternativas: [
           {
             texto:"206",
@@ -46,7 +46,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "QUal o pais sede das Olimpiadas no ano de 2024",
+        enunciado: "Qual o país sede das Olimpíadas no ano de 2024?",
         alternativas: [
           {
             texto:"FRANÇA",
