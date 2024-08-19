@@ -1,3 +1,4 @@
+
 :root {
     --cor-fundo: #01080E; /* Fundo escuro */
     --cor-principal: #005EB8; /* Azul Olímpico */
@@ -12,6 +13,7 @@
     --cor-botao-claro: #34A853; /* Cor do botão no modo claro */
     --cor-botao-texto-claro: #FFFFFF; /* Cor do texto do botão no modo claro */
     --cor-borda: #34A853; /* Cor da borda verde */
+    --cor-toggle-mode: #010f05; /* Cor da borda verde */
 }
 
 body {
@@ -61,7 +63,7 @@ button {
     border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s, color 0.3s;
-    margin: 10px 0; /* Adicionado margem para separar os botões */
+    margin: 10px;/* Adicionado margem para separar os botões */
 }
 
 button:hover {
@@ -77,6 +79,7 @@ button:hover {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    color: var(--cor-toggle-mode);
 }
 
 body.light-mode .toggle-mode {
